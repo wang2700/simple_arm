@@ -74,8 +74,8 @@ int main(int argc, char** argv)
     ros::NodeHandle n;
 
     //Define two publisher to publish std_msgs::Float64 message on joints respective topics
-    joint1_pub = n.advertise<std_msgs::Float64>("/simple_arm/joint_1_position_controller/command", 10)
-    joint2_pub = n.advertise<std_msgs::Float64>("/simple_arm/joint_2_position_controller/command", 10)
+    joint1_pub = n.advertise<std_msgs::Float64>("/simple_arm/joint_1_position_controller/command", 10);
+    joint2_pub = n.advertise<std_msgs::Float64>("/simple_arm/joint_2_position_controller/command", 10);
 
     // Define a safe_move service with a handle_safe_move_request callback function
     ros::ServiceServer service = n.advertiseService("/arm_mover/safe_move", handle_safe_move_request);
