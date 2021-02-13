@@ -61,7 +61,7 @@ bool handle_safe_move_request(simple_arm::GoToPosition::Request& req,
     ros::Duration(3).sleep();
 
     // Return a response message
-    res.msg_feedback = "Joint angles set -j1: " + std::to_string(joints_angle[0]) + "Joint angles set -j2: " + std::to_string(joints_angle[1]);
+    res.msg_feedback = "Joint angles set -j1: " + std::to_string(joints_angles[0]) + "Joint angles set -j2: " + std::to_string(joints_angles[1]);
     ROS_INFO_STREAM(res.msg_feedback);
 
     return true;
@@ -70,7 +70,7 @@ bool handle_safe_move_request(simple_arm::GoToPosition::Request& req,
 int main(int argc, char** argv)
 {
     // Initialize the arm_mover node and create a handle to it
-    ros::init(argc, argv, "arm_mover")
+    ros::init(argc, argv, "arm_mover");
     ros::NodeHandle n;
 
     //Define two publisher to publish std_msgs::Float64 message on joints respective topics
