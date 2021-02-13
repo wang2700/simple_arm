@@ -18,8 +18,8 @@ std::vector<float> clamp_at_boundaries(float requested_j1, float requested_j2)
     std::string node_name = ros::this_node::getName();
     // Get joints min and max parameters
     n2.getParam(node_name + "/min_joint_1_angle", min_j1);
-    n2.getParam(node_name + "/max_joint_1_angle", max_j2);
-    n2.getParam(node_name + "/min_joint_2_angle", min_j1);
+    n2.getParam(node_name + "/max_joint_1_angle", max_j1);
+    n2.getParam(node_name + "/min_joint_2_angle", min_j2);
     n2.getParam(node_name + "/max_joint_2_angle", max_j2);
 
     // check if joint 1 falls in the safe zone, otherwise clamp it
