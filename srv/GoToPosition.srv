@@ -1,4 +1,4 @@
 float64 joint_1
 float64 joint_2
 ---
-duration time_elapsed
+string msg_feedback
