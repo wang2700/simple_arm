@@ -6,7 +6,7 @@
 // Define global vextor of joints last position, moving state of the arm, and the client that can request the services
 std::vector<double> joints_last_position{0, 0};
 bool moving_state = false;
-ros::ServiceClient = client;
+ros::ServiceClient client;
 
 // This function calls the safe_move service to safely move the arm to the center position
 void move_arm_center()
