@@ -1,7 +1,7 @@
 #include "ros/ros.h"
 #include "simple_arm/GoToPosition.h"
-#inlcude <sensor_msgs/JointState.h>
-#inlcude <sensor_msgs/Image.h>
+#include <sensor_msgs/JointState.h>
+#include <sensor_msgs/Image.h>
 
 // Define global vextor of joints last position, moving state of the arm, and the client that can request the services
 std::vector<double> joints_last_position{0, 0};
